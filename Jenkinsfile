@@ -28,7 +28,7 @@ def ami_id = ''
 
 node("packer"){
     stage('Pull Repo') {
-        git url: 'https://github.com/ikambarov/packer.git'
+        git url: 'https://github.com/john24rel/packer.git'
     }
 
     withCredentials([usernamePassword(credentialsId: 'jenkins_aws_keys', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
